@@ -23,5 +23,5 @@ jobs:
       - run: npm install
         name: Install dependencies  <--- Correctly indented
       # We execute our test execution command
-      - run: npx wdio test/wdio.conf.ts
+      - run: npx wdio wdio.conf.ts
         name: Running E2E tests
