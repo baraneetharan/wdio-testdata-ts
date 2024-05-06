@@ -59,8 +59,14 @@ export const config: Options.Testrunner = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
-    }],
+  
+       maxInstances: 5,
+       browserName: 'chrome',
+       acceptInsecureCerts: true,
+       'goog:chromeOptions': { 
+           args: ["--headless", "user-agent=...","--disable-gpu","--window-size=1440,735"]
+      }
+   }],
 
     //
     // ===================
